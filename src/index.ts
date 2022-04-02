@@ -1,15 +1,15 @@
-export function lineLength(A: number[], B: number[]): number {
-  return Math.sqrt((B[0] - A[0]) ** 2 + (B[1] - A[1]) ** 2);
+export function lineLength([x1, y1]: number[], [x2, y2]: number[]): number {
+  return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 }
 
-export function pointBetween(A: number[], B: number[]): number[] {
-  return [(A[0] + B[0]) / 2, (A[1] + B[1]) / 2];
+export function pointBetween([x1, y1]: number[], [x2, y2]: number[]): number[] {
+  return [(x1 + x2) / 2, (y1 + y2) / 2];
 }
 
-export function perpendicularBisector(A: number[], B: number[]): string {
-  const [x1, y1] = A;
-  const [x2, y2] = B;
-
+export function perpendicularBisector(
+  [x1, y1]: number[],
+  [x2, y2]: number[]
+): string {
   let a1 = 1;
 
   // We have X and Y for both, therefore we can find a and b (Y = a*X + b)
@@ -20,7 +20,7 @@ export function perpendicularBisector(A: number[], B: number[]): string {
 
   a1 = systemEqOne / systemEqTwo;
 
-  const [x3, y3] = pointBetween(A, B);
+  const [x3, y3] = pointBetween([x1, y1], [x2, y2]);
 
   // y3 = a * x3 + b;
 
