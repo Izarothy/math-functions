@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\izaro\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D @types/fractional
+  C:\Program Files\nodejs\node.exe C:\Users\izaro\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js publish
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\nodejs\;C:\Users\izaro\AppData\Local\Microsoft\WindowsApps;C:\Users\izaro\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Users\izaro\AppData\Roaming\npm
@@ -14,17 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2ffractional: Not found
-      at Request.params.callback [as _callback] (C:\Users\izaro\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67029:18)
-      at Request.self.callback (C:\Users\izaro\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (C:\Users\izaro\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (C:\Users\izaro\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1343:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\izaro\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137143:13)
+      at Interface.emit (node:events:390:28)
+      at Interface._ttyWrite (node:readline:1081:16)
+      at ReadStream.onkeypress (node:readline:288:10)
+      at ReadStream.emit (node:events:390:28)
+      at emitKeys (node:internal/readline/utils:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:61:36)
+      at ReadStream.emit (node:events:390:28)
+      at addChunk (node:internal/streams/readable:315:12)
 
 npm manifest: 
   {
@@ -64,8 +64,7 @@ npm manifest:
       "typescript": "^4.6.3"
     },
     "dependencies": {
-      "fractional": "^1.0.0",
-      "mathjs": "^10.4.2"
+      "fraction.js": "^4.2.0"
     }
   }
 
@@ -427,7 +426,7 @@ Lockfile:
       core-js-pure "^3.20.2"
       regenerator-runtime "^0.13.4"
   
-  "@babel/runtime@^7.10.2", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.8":
+  "@babel/runtime@^7.10.2", "@babel/runtime@^7.16.3":
     version "7.17.8"
     resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.8.tgz#3e56e4aff81befa55ac3ac6a0967349fd1c5bca2"
     integrity sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==
@@ -1359,11 +1358,6 @@ Lockfile:
     dependencies:
       delayed-stream "~1.0.0"
   
-  complex.js@^2.1.0:
-    version "2.1.0"
-    resolved "https://registry.yarnpkg.com/complex.js/-/complex.js-2.1.0.tgz#211258e271345213c6f004c0ea90a34eb1e0c753"
-    integrity sha512-RdcrDz7YynXp/YXGwXIZ4MtmxXXniT5WmLFRX93cuXUX+0geWAqB8l1BoLXF+3BkzviVzHlpw27P9ow7MvlcmA==
-  
   concat-map@0.0.1:
     version "0.0.1"
     resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -1452,7 +1446,7 @@ Lockfile:
     dependencies:
       ms "^2.1.1"
   
-  decimal.js@^10.2.1, decimal.js@^10.3.1:
+  decimal.js@^10.2.1:
     version "10.3.1"
     resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.3.1.tgz#d8c3a444a9c6774ba60ca6ad7261c3a94fd5e783"
     integrity sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==
@@ -1640,11 +1634,6 @@ Lockfile:
     version "3.1.1"
     resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
     integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
-  
-  escape-latex@^1.2.0:
-    version "1.2.0"
-    resolved "https://registry.yarnpkg.com/escape-latex/-/escape-latex-1.2.0.tgz#07c03818cf7dac250cce517f4fda1b001ef2bca1"
-    integrity sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw==
   
   escape-string-regexp@^1.0.5:
     version "1.0.5"
@@ -2051,11 +2040,6 @@ Lockfile:
     version "4.2.0"
     resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
     integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
-  
-  fractional@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/fractional/-/fractional-1.0.0.tgz#dab167a2f9f804cf9038bddf47aa9ba7f207eabc"
-    integrity sha1-2rFnovn4BM+QOL3fR6qbp/IH6rw=
   
   fs.realpath@^1.0.0:
     version "1.0.0"
@@ -2480,11 +2464,6 @@ Lockfile:
     dependencies:
       html-escaper "^2.0.0"
       istanbul-lib-report "^3.0.0"
-  
-  javascript-natural-sort@^0.7.1:
-    version "0.7.1"
-    resolved "https://registry.yarnpkg.com/javascript-natural-sort/-/javascript-natural-sort-0.7.1.tgz#f9e2303d4507f6d74355a73664d1440fb5a0ef59"
-    integrity sha1-+eIwPUUH9tdDVac2ZNFED7Wg71k=
   
   jest-changed-files@^27.5.1:
     version "27.5.1"
@@ -3090,21 +3069,6 @@ Lockfile:
     dependencies:
       tmpl "1.0.5"
   
-  mathjs@^10.4.2:
-    version "10.4.2"
-    resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-10.4.2.tgz#bae041b99f7774f807a0b0f98b8fd3c06f493a5a"
-    integrity sha512-3yXxFBR0V2Ij+jk7LV5k15lb+yivRxYRzjmuDYB1+yUzM3x7/XXNjIUZlcyp6l96BUMsOWzgZfIeYxg/dzqxKw==
-    dependencies:
-      "@babel/runtime" "^7.17.8"
-      complex.js "^2.1.0"
-      decimal.js "^10.3.1"
-      escape-latex "^1.2.0"
-      fraction.js "^4.2.0"
-      javascript-natural-sort "^0.7.1"
-      seedrandom "^3.0.5"
-      tiny-emitter "^2.1.0"
-      typed-function "^2.1.0"
-  
   merge-stream@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
@@ -3585,11 +3549,6 @@ Lockfile:
     dependencies:
       xmlchars "^2.2.0"
   
-  seedrandom@^3.0.5:
-    version "3.0.5"
-    resolved "https://registry.yarnpkg.com/seedrandom/-/seedrandom-3.0.5.tgz#54edc85c95222525b0c7a6f6b3543d8e0b3aa0a7"
-    integrity sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==
-  
   semver@7.x, semver@^7.2.1, semver@^7.3.2, semver@^7.3.5:
     version "7.3.5"
     resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.5.tgz#0b621c879348d8998e4b0e4be94b3f12e6018ef7"
@@ -3813,11 +3772,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/throat/-/throat-6.0.1.tgz#d514fedad95740c12c2d7fc70ea863eb51ade375"
     integrity sha512-8hmiGIJMDlwjg7dlJ4yKGLK8EsYqKgPWbG3b4wjJddKNwc7N7Dpn08Df4szr/sZdMVeOstrdYSsqzX6BYbcB+w==
   
-  tiny-emitter@^2.1.0:
-    version "2.1.0"
-    resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
-    integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
-  
   tmpl@1.0.5:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
@@ -3934,11 +3888,6 @@ Lockfile:
     version "0.21.3"
     resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
     integrity sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==
-  
-  typed-function@^2.1.0:
-    version "2.1.0"
-    resolved "https://registry.yarnpkg.com/typed-function/-/typed-function-2.1.0.tgz#ded6f8a442ba8749ff3fe75bc41419c8d46ccc3f"
-    integrity sha512-bctQIOqx2iVbWGDGPWwIm18QScpu2XRmkC19D8rQGFsjKSgteq/o1hTZvIG/wuDq8fanpBDrLkLq+aEN/6y5XQ==
   
   typedarray-to-buffer@^3.1.5:
     version "3.1.5"
