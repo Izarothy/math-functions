@@ -1,3 +1,5 @@
+import Fraction from 'fraction.js';
+
 export function lineLength([x1, y1]: number[], [x2, y2]: number[]): number {
   return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 }
@@ -6,10 +8,10 @@ export function pointBetween([x1, y1]: number[], [x2, y2]: number[]): number[] {
   return [(x1 + x2) / 2, (y1 + y2) / 2];
 }
 
-export function perpendicularBisector(
-  [x1, y1]: number[],
-  [x2, y2]: number[]
-): string {
+export const perpendicularBisector = (A: number[], B: number[]): string => {
+  const [x1, y1] = A;
+  const [x2, y2] = B;
+
   let a1 = 1;
 
   // We have X and Y for both, therefore we can find a and b (Y = a*X + b)
@@ -36,5 +38,8 @@ export function perpendicularBisector(
 
   if (b3 < 0) return `y = ${a3}x ${b3}`;
 
-  return `y = ${a3}x + ${b3}`;
-}
+  const fractA = new Fraction(a3);
+  const fractB = new Fraction(b3);
+
+  return `y = ${fractA.toFraction(true)}x + ${fractB.toFraction(true)}`;
+};
