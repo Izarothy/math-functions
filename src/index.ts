@@ -15,22 +15,22 @@ export function perpendicularBisector(
   // We have X and Y for both, therefore we can find a and b (Y = a*X + b)
 
   // Solve a system of equations where a is the preferred unknown to find
-  const systemEqOne = y1 - y2; // left part
-  const systemEqTwo = x1 - x2; // right part
+  const systemEqOne: number = y1 - y2; // left part
+  const systemEqTwo: number = x1 - x2; // right part
 
   a1 = systemEqOne / systemEqTwo;
 
-  const [x3, y3] = pointBetween([x1, y1], [x2, y2]);
+  const [x3, y3]: number[] = pointBetween([x1, y1], [x2, y2]);
 
   // y3 = a * x3 + b;
 
   // We can find A3 through the law that perpendicular bisectors' A values, when multiplied, give -1
   // a1 * a3 = -1;
-  const a3 = -1 / a1;
+  const a3: number = -1 / a1;
 
   // y3 = a3 * x3 + b;
 
-  const b3 = y3 - a3 * x3;
+  const b3: number = y3 - a3 * x3;
 
   // If B is negative, it'll just print -b3 instead of +-b3
 
