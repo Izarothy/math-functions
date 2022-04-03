@@ -6,6 +6,7 @@
     "start": "ts-node --esm src/index.ts",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
+  "main": "src/index.ts",
   "type": "module",
   "author": "Izarothy <izarothmail@gmail.com>",
   "license": "MIT",
