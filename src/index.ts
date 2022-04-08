@@ -43,3 +43,15 @@ export const perpendicularBisector = (A: number[], B: number[]): string => {
 
   return `y = ${fractA.toFraction(true)}x + ${fractB.toFraction(true)}`;
 };
+
+export const pointToLineDistance = (
+  [A, B, C]: number[],
+  [x, y]: number[]
+): number => {
+  // Formula for the distance is (abstract of A * x + B * y + C) divided by a square root of (A^2 + B^2)
+
+  const distance = Math.abs(A * x + B * y + C) / Math.sqrt(A ** 2 + B ** 2);
+
+  // since toFixed makes it a string, we have to convert it back.
+  return Number(distance.toFixed(2));
+};
