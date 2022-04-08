@@ -1,12 +1,12 @@
 import Fraction from 'fraction.js';
 
-export function lineLength([x1, y1]: number[], [x2, y2]: number[]): number {
-  return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
-}
+export const lineLength = ([x1, y1]: number[], [x2, y2]: number[]): number =>
+  Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 
-export function pointBetween([x1, y1]: number[], [x2, y2]: number[]): number[] {
-  return [(x1 + x2) / 2, (y1 + y2) / 2];
-}
+export const pointBetween = (
+  [x1, y1]: number[],
+  [x2, y2]: number[]
+): number[] => [(x1 + x2) / 2, (y1 + y2) / 2];
 
 export const perpendicularBisector = (A: number[], B: number[]): string => {
   const [x1, y1] = A;
