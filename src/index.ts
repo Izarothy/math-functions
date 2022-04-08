@@ -1,4 +1,4 @@
-import Fraction from 'fraction.js';
+const roundDecimal = (num: number) => Number(num.toFixed(2));
 
 export const lineLength = ([x1, y1]: number[], [x2, y2]: number[]): number =>
   Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
@@ -38,10 +38,7 @@ export const perpendicularBisector = (A: number[], B: number[]): string => {
 
   if (b3 < 0) return `y = ${a3}x ${b3}`;
 
-  const fractA = new Fraction(a3);
-  const fractB = new Fraction(b3);
-
-  return `y = ${fractA.toFraction(true)}x + ${fractB.toFraction(true)}`;
+  return `y = ${roundDecimal(a3)}x + ${roundDecimal(b3)}`;
 };
 
 export const pointToLineDistance = (
@@ -52,6 +49,5 @@ export const pointToLineDistance = (
 
   const distance = Math.abs(A * x + B * y + C) / Math.sqrt(A ** 2 + B ** 2);
 
-  // since toFixed makes it a string, we have to convert it back.
-  return Number(distance.toFixed(2));
+  return roundDecimal(distance);
 };
